@@ -3,7 +3,7 @@ using Hover.Board.Display;
 using Hover.Common.Display;
 using UnityEngine;
 
-namespace Hover.Demo.BoardKeys {
+namespace BibVR.KeyBoard {
 
   /*================================================================================================*/
   public class BibVRTextField : MonoBehaviour {

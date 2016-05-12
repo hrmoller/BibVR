@@ -4,19 +4,17 @@ using Hover.Board.Items;
 using Hover.Common.Items;
 using UnityEngine;
 
-namespace Hover.Demo.BoardKeys {
+namespace BibVR.KeyBoard {
 
   /*================================================================================================*/
   public class BibVRHoverBoardKeyboardListener : MonoBehaviour {
 
-    public DemoEnvironment vEnviro;
     public BibVRTextField vTextField;
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     /*--------------------------------------------------------------------------------------------*/
     public void Awake() {
-      vEnviro = GameObject.Find("BibVRHoverVREnvironment").GetComponent<DemoEnvironment>();
       vTextField = GameObject.Find("BibVRTextField").GetComponent<BibVRTextField>();
     }
 
@@ -47,25 +45,22 @@ namespace Hover.Demo.BoardKeys {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     /*--------------------------------------------------------------------------------------------*/
     private void HandleItemSelected(ISelectableItem pItem) {
-      Debug.Log("hest");
-      Debug.Log(pItem.Label);
       if( pItem.Label == "^" ) {
         return;
       }
 
       if( pItem.Label.Length == 1 ) {
-        //vEnviro.AddLetter(pItem.Label[0]);
         vTextField.AddLetter(pItem.Label[0]);
         return;
       }
 
       if( pItem.Label.ToLower() == "back" ) {
-        //vEnviro.RemoveLatestLetter();
         vTextField.RemoveLatestLetter();
       }
 
       if( pItem.Label.ToLower() == "enter" ) {
-        Debug.Log(vTextField.GetLetter());
+        Debug.Log("enter was pressed - search to be executed...");
+        // TODO execute search // hide keyboard
         vTextField.ClearLetters();
       }
     }

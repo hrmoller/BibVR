@@ -5,7 +5,7 @@ using Hover.Cast;
 using Hover.Cast.State;
 using UnityEngine;
 
-namespace Hover.Demo.BoardKeys {
+namespace BibVR {
 
   /*================================================================================================*/
   public class BibVRHovercastListener : MonoBehaviour {

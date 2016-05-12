@@ -10,14 +10,14 @@ namespace Hover.Demo.BoardKeys {
   public class DemoKeyboardListener : MonoBehaviour {
 
 //    public DemoEnvironment vEnviro;
-    public BibVRTextField vTextField;
+    public DemoTextField vTextField;
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     /*--------------------------------------------------------------------------------------------*/
     public void Awake() {
 //      vEnviro = GameObject.Find("DemoEnvironment").GetComponent<DemoEnvironment>();
-      vTextField = GameObject.Find("BibVRTextField").GetComponent<BibVRTextField>();
+      vTextField = GameObject.Find("DemoTextField").GetComponent<DemoTextField>();
     }
 
     /*--------------------------------------------------------------------------------------------*/

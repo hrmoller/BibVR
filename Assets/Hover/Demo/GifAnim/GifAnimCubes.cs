@@ -55,7 +55,7 @@ namespace Hover.Demo.GifAnim {
 			hold.transform.localRotation = UnityEngine.Random.rotationUniform;
 			cube.transform.localRotation = UnityEngine.Random.rotationUniform;
 
-			float radius = RandomUtil.Float(4, 10);
+			float radius = RandomUtil.Float(10f, 10f);
 
 			float bobPos = RandomUtil.Float(-1, 1);
 			bobPos = (float)Math.Sin(bobPos*Math.PI)/2f + 0.5f;
